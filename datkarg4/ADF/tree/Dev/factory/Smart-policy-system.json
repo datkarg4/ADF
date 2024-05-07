@@ -1,0 +1,9 @@
+{
+	"name": "Smart-policy-system",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f5c28874-cc94-453e-b767-c8da61735fdd",
+		"tenantId": "cb2fdc41-bef9-4c09-b884-537ae0cb531b"
+	}
+}
