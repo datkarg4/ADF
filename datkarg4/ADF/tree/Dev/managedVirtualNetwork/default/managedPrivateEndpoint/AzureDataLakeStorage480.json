@@ -1,0 +1,7 @@
+{
+	"name": "AzureDataLakeStorage480",
+	"properties": {
+		"privateLinkResourceId": "/subscriptions/a8c0200c-b805-47ea-bde3-5923054a28ac/resourceGroups/missionazure_hrushi/providers/Microsoft.Storage/storageAccounts/policydataproject",
+		"groupId": "dfs"
+	}
+}
