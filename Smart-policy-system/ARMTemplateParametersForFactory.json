@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "Smart-policy-system"
+		},
+		"ADLSGEN2_accountKey": {
+			"value": ""
+		},
+		"archival_path_connectionString": {
+			"value": ""
+		},
+		"landing_path_connectionString": {
+			"value": ""
+		},
+		"srcfiles_path_connectionString": {
+			"value": ""
+		},
+		"ADLSGEN2_properties_typeProperties_url": {
+			"value": "https://policydataproject.dfs.core.windows.net/"
+		},
+		"AzureDataLakeStorage480_properties_privateLinkResourceId": {
+			"value": "/subscriptions/a8c0200c-b805-47ea-bde3-5923054a28ac/resourceGroups/missionazure_hrushi/providers/Microsoft.Storage/storageAccounts/policydataproject"
+		},
+		"AzureDataLakeStorage480_properties_groupId": {
+			"value": "dfs"
+		}
+	}
+}
