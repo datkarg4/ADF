@@ -7,14 +7,7 @@
 			"domain": "https://adb-2321416469303374.14.azuredatabricks.net",
 			"authentication": "MSI",
 			"workspaceResourceId": "/subscriptions/f79ade56-8f39-4e53-9abf-29a4c779f163/resourceGroups/adf-idc-storage-account/providers/Microsoft.Databricks/workspaces/idc_app_databricks",
-			"newClusterNodeType": "1",
-			"newClusterNumOfWorker": "1",
-			"newClusterSparkEnvVars": {
-				"PYSPARK_PYTHON": "/databricks/python3/bin/python3"
-			},
-			"newClusterVersion": "1",
-			"clusterOption": "Fixed",
-			"newClusterInitScripts": []
+			"existingClusterId": "1006-091446-qvf2s0np"
 		},
 		"connectVia": {
 			"referenceName": "AutoResolveIntegrationRuntime",
