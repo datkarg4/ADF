@@ -3,28 +3,48 @@
 	"properties": {
 		"nbformat": 4,
 		"nbformat_minor": 2,
+		"bigDataPool": {
+			"referenceName": "idcapachespool",
+			"type": "BigDataPoolReference"
+		},
 		"sessionProperties": {
-			"driverMemory": "28g",
-			"driverCores": 4,
-			"executorMemory": "28g",
-			"executorCores": 4,
+			"driverMemory": "56g",
+			"driverCores": 8,
+			"executorMemory": "56g",
+			"executorCores": 8,
 			"numExecutors": 2,
 			"runAsWorkspaceSystemIdentity": false,
 			"conf": {
 				"spark.dynamicAllocation.enabled": "false",
 				"spark.dynamicAllocation.minExecutors": "2",
 				"spark.dynamicAllocation.maxExecutors": "2",
-				"spark.autotune.trackingId": "4e2f1740-638c-4992-90c0-e75b134d07bf"
+				"spark.autotune.trackingId": "e7939dfa-2783-42e5-995c-549927a53ad2"
 			}
 		},
 		"metadata": {
 			"saveOutput": true,
-			"synapse_widget": {
-				"version": "0.1"
-			},
 			"enableDebugMode": false,
+			"kernelspec": {
+				"name": "synapse_pyspark",
+				"display_name": "Synapse PySpark"
+			},
 			"language_info": {
 				"name": "python"
+			},
+			"a365ComputeOptions": {
+				"id": "/subscriptions/f79ade56-8f39-4e53-9abf-29a4c779f163/resourceGroups/adf-idc-storage-account/providers/Microsoft.Synapse/workspaces/idc-app-synapse/bigDataPools/idcapachespool",
+				"name": "idcapachespool",
+				"type": "Spark",
+				"endpoint": "https://idc-app-synapse.dev.azuresynapse.net/livyApi/versions/2019-11-01-preview/sparkPools/idcapachespool",
+				"auth": {
+					"type": "AAD",
+					"authResource": "https://dev.azuresynapse.net"
+				},
+				"sparkVersion": "3.4",
+				"nodeCount": 3,
+				"cores": 8,
+				"memory": 56,
+				"automaticScaleJobs": false
 			},
 			"sessionKeepAliveTimeout": 30
 		},
@@ -32,8 +52,10 @@
 			{
 				"cell_type": "code",
 				"source": [
-					"from pyspark import *\r\n",
+					"\r\n",
 					"from pyspark.sql.functions import *\r\n",
+					"\r\n",
+					"\r\n",
 					"data1 =[(1,\"hrushikesh\",\"Pune\")]\r\n",
 					"dataschema = [\"id\",\"name\",\"city\"]\r\n",
 					"data2schema = [\"id\",\"name\",\"city\",\"state\"]\r\n",
@@ -48,7 +70,8 @@
 					"df4 = df2.union(df3)\r\n",
 					"\r\n",
 					"df4.write.mode(\"overwrite\").csv('student.csv', header=True)"
-				]
+				],
+				"execution_count": null
 			}
 		]
 	}
