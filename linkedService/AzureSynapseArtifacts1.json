@@ -1,0 +1,16 @@
+{
+	"name": "AzureSynapseArtifacts1",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSynapseArtifacts",
+		"typeProperties": {
+			"endpoint": "https://idc-app-synapse.dev.azuresynapse.net",
+			"authentication": "MSI",
+			"workspaceResourceId": "/subscriptions/f79ade56-8f39-4e53-9abf-29a4c779f163/resourceGroups/adf-idc-storage-account/providers/Microsoft.Synapse/workspaces/idc-app-synapse"
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
