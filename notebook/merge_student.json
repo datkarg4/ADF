@@ -1,0 +1,55 @@
+{
+	"name": "merge_student",
+	"properties": {
+		"nbformat": 4,
+		"nbformat_minor": 2,
+		"sessionProperties": {
+			"driverMemory": "28g",
+			"driverCores": 4,
+			"executorMemory": "28g",
+			"executorCores": 4,
+			"numExecutors": 2,
+			"runAsWorkspaceSystemIdentity": false,
+			"conf": {
+				"spark.dynamicAllocation.enabled": "false",
+				"spark.dynamicAllocation.minExecutors": "2",
+				"spark.dynamicAllocation.maxExecutors": "2",
+				"spark.autotune.trackingId": "4e2f1740-638c-4992-90c0-e75b134d07bf"
+			}
+		},
+		"metadata": {
+			"saveOutput": true,
+			"synapse_widget": {
+				"version": "0.1"
+			},
+			"enableDebugMode": false,
+			"language_info": {
+				"name": "python"
+			},
+			"sessionKeepAliveTimeout": 30
+		},
+		"cells": [
+			{
+				"cell_type": "code",
+				"source": [
+					"from pyspark import *\r\n",
+					"from pyspark.sql.functions import *\r\n",
+					"data1 =[(1,\"hrushikesh\",\"Pune\")]\r\n",
+					"dataschema = [\"id\",\"name\",\"city\"]\r\n",
+					"data2schema = [\"id\",\"name\",\"city\",\"state\"]\r\n",
+					"data2 =[(2,\"Aman\",\"jabalpur\",\"MP\"),(3,\"himanshu\",\"Mumbai\",\"MH\"),(4,\"Rajesh\",\"Mumbai\",\"MH\")]\r\n",
+					"\r\n",
+					"df1 =spark.createDataFrame(data1,dataschema)\r\n",
+					"df1.show()\r\n",
+					"df2 =spark.createDataFrame(data2,data2schema)\r\n",
+					"df2.show()\r\n",
+					"df3 = df1.withColumn(\"State\",lit(\"\"))\r\n",
+					"#df3 = df1.withColumn(\"state\", \"\")\r\n",
+					"df4 = df2.union(df3)\r\n",
+					"\r\n",
+					"df4.write.mode(\"overwrite\").csv('student.csv', header=True)"
+				]
+			}
+		]
+	}
+}
