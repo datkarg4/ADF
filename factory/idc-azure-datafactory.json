@@ -5,6 +5,10 @@
 			"project_name": {
 				"type": "string",
 				"value": "IDC"
+			},
+			"src_schema": {
+				"type": "string",
+				"value": "idc_staging_db"
 			}
 		}
 	},
