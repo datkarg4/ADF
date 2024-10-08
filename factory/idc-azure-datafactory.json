@@ -1,5 +1,13 @@
 {
 	"name": "idc-azure-datafactory",
+	"properties": {
+		"globalParameters": {
+			"project_name": {
+				"type": "string",
+				"value": "IDC"
+			}
+		}
+	},
 	"location": "eastus",
 	"identity": {
 		"type": "SystemAssigned",
