@@ -7,7 +7,8 @@
 		},
 		"parameters": {
 			"Folder": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "lookup-files"
 			}
 		},
 		"folder": {
@@ -17,12 +18,7 @@
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobFSLocation",
-				"folderPath": {
-					"value": "@dataset().Folder",
-					"type": "Expression"
-				},
-				"fileSystem": "demo"
+				"type": "AzureBlobFSLocation"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
