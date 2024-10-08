@@ -14,6 +14,10 @@
 				"type": "string",
 				"value": "idc_app_db"
 			}
+		},
+		"globalConfigurations": {
+			"factoryStagingLSReferenceName": "AzureDataLakeStorage1",
+			"factoryStagingLSType": "LinkedServiceReference"
 		}
 	},
 	"location": "eastus",
