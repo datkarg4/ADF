@@ -3,20 +3,13 @@
 	"properties": {
 		"annotations": [],
 		"runtimeState": "Started",
-		"pipelines": [
-			{
-				"pipelineReference": {
-					"referenceName": "p_idc_transaction",
-					"type": "PipelineReference"
-				}
-			}
-		],
+		"pipelines": [],
 		"type": "ScheduleTrigger",
 		"typeProperties": {
 			"recurrence": {
 				"frequency": "Minute",
 				"interval": 1,
-				"startTime": "2024-10-08T12:53:00",
+				"startTime": "2024-10-06T20:55:00",
 				"timeZone": "India Standard Time"
 			}
 		}
