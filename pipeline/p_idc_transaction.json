@@ -47,7 +47,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"expression": {
-						"value": "@contains(formatDateTime(utcnow(),'mm'),activity('Lookup1').output.value)",
+						"value": "@contains(activity('Lookup1').output.value,formatDateTime(utcnow(),'mm'))",
 						"type": "Expression"
 					},
 					"ifTrueActivities": [
