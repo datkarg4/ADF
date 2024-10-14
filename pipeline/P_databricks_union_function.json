@@ -17,10 +17,6 @@
 				"userProperties": [],
 				"typeProperties": {
 					"notebookPath": "/Workspace/Users/datkar94@gmail.com/merge_dataframe_union"
-				},
-				"linkedServiceName": {
-					"referenceName": "AzureDatabricks1",
-					"type": "LinkedServiceReference"
 				}
 			},
 			{
@@ -132,8 +128,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"enableLogging": true,
-					"recursive": false
+					"enableLogging": true
 				}
 			},
 			{
