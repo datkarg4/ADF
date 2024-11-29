@@ -71,6 +71,22 @@
 				"type": "Filter",
 				"dependsOn": [],
 				"userProperties": []
+			},
+			{
+				"name": "Until1",
+				"type": "Until",
+				"dependsOn": [
+					{
+						"activity": "ForEach1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"timeout": "0.12:00:00"
+				}
 			}
 		],
 		"variables": {
