@@ -59,6 +59,18 @@
 				"type": "ForEach",
 				"dependsOn": [],
 				"userProperties": []
+			},
+			{
+				"name": "ForEach2",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": []
+			},
+			{
+				"name": "Filter1",
+				"type": "Filter",
+				"dependsOn": [],
+				"userProperties": []
 			}
 		],
 		"variables": {
