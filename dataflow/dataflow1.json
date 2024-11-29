@@ -25,6 +25,9 @@
 				},
 				{
 					"name": "union1"
+				},
+				{
+					"name": "exists1"
 				}
 			],
 			"scriptLines": [
@@ -47,7 +50,10 @@
 				"     ERROR_FUNCTION(''),",
 				"     ERROR_FUNCTION(''),",
 				"     disjoint: false) ~> split1@(, , , , , )",
-				"split1, split1, split1, split1, split1, split1 union(byName: true)~> union1"
+				"split1, split1, split1, split1, split1, split1 union(byName: true)~> union1",
+				"union1, source1 exists(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"     negate:false,",
+				"     broadcast: 'auto')~> exists1"
 			]
 		}
 	}
