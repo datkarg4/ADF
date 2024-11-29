@@ -48,7 +48,11 @@
 					"name": "alterRow1"
 				},
 				{
-					"name": "flowlet1"
+					"name": "flowlet1",
+					"flowlet": {
+						"referenceName": "flowlet1",
+						"type": "DataFlowReference"
+					}
 				}
 			],
 			"scriptLines": [
@@ -85,7 +89,7 @@
 				"     partitionLevel: true) ~> sort1",
 				"sort1 assert(expectTrue(ERROR_FUNCTION(''), false, 'assert1')) ~> assert1",
 				"assert1 alterRow() ~> alterRow1",
-				"alterRow1 compose(composition: 'undefined') ~> flowlet1@()"
+				"alterRow1 compose(composition: 'flowlet1') ~> flowlet1@()"
 			]
 		}
 	}
