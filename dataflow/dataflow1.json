@@ -46,6 +46,9 @@
 				},
 				{
 					"name": "alterRow1"
+				},
+				{
+					"name": "flowlet1"
 				}
 			],
 			"scriptLines": [
@@ -81,7 +84,8 @@
 				"filter1 sort(asc(temp, true),",
 				"     partitionLevel: true) ~> sort1",
 				"sort1 assert(expectTrue(ERROR_FUNCTION(''), false, 'assert1')) ~> assert1",
-				"assert1 alterRow() ~> alterRow1"
+				"assert1 alterRow() ~> alterRow1",
+				"alterRow1 compose(composition: 'undefined') ~> flowlet1@()"
 			]
 		}
 	}
