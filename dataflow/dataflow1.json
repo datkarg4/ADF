@@ -28,6 +28,9 @@
 				},
 				{
 					"name": "exists1"
+				},
+				{
+					"name": "lookup1"
 				}
 			],
 			"scriptLines": [
@@ -53,7 +56,11 @@
 				"split1, split1, split1, split1, split1, split1 union(byName: true)~> union1",
 				"union1, source1 exists(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
 				"     negate:false,",
-				"     broadcast: 'auto')~> exists1"
+				"     broadcast: 'auto')~> exists1",
+				"exists1, source1 lookup(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
+				"     multiple: false,",
+				"     pickup: 'any',",
+				"     broadcast: 'auto')~> lookup1"
 			]
 		}
 	}
