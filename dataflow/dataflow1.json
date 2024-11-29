@@ -43,6 +43,9 @@
 				},
 				{
 					"name": "assert1"
+				},
+				{
+					"name": "alterRow1"
 				}
 			],
 			"scriptLines": [
@@ -77,7 +80,8 @@
 				"derivedColumn1 filter(ERROR_FUNCTION('1=1')) ~> filter1",
 				"filter1 sort(asc(temp, true),",
 				"     partitionLevel: true) ~> sort1",
-				"sort1 assert(expectTrue(ERROR_FUNCTION(''), false, 'assert1')) ~> assert1"
+				"sort1 assert(expectTrue(ERROR_FUNCTION(''), false, 'assert1')) ~> assert1",
+				"assert1 alterRow() ~> alterRow1"
 			]
 		}
 	}
