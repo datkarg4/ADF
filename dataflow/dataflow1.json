@@ -31,6 +31,9 @@
 				},
 				{
 					"name": "lookup1"
+				},
+				{
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -60,7 +63,8 @@
 				"exists1, source1 lookup(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
 				"     multiple: false,",
 				"     pickup: 'any',",
-				"     broadcast: 'auto')~> lookup1"
+				"     broadcast: 'auto')~> lookup1",
+				"lookup1 derive() ~> derivedColumn1"
 			]
 		}
 	}
