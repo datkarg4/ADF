@@ -22,6 +22,9 @@
 				},
 				{
 					"name": "split1"
+				},
+				{
+					"name": "union1"
 				}
 			],
 			"scriptLines": [
@@ -39,7 +42,12 @@
 				"     ignoreSpaces: false,",
 				"     broadcast: 'auto')~> join1",
 				"join1 split(ERROR_FUNCTION(''),",
-				"     disjoint: false) ~> split1@(, )"
+				"     ERROR_FUNCTION(''),",
+				"     ERROR_FUNCTION(''),",
+				"     ERROR_FUNCTION(''),",
+				"     ERROR_FUNCTION(''),",
+				"     disjoint: false) ~> split1@(, , , , , )",
+				"split1, split1, split1, split1, split1, split1 union(byName: true)~> union1"
 			]
 		}
 	}
