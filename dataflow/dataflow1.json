@@ -34,6 +34,15 @@
 				},
 				{
 					"name": "derivedColumn1"
+				},
+				{
+					"name": "filter1"
+				},
+				{
+					"name": "sort1"
+				},
+				{
+					"name": "assert1"
 				}
 			],
 			"scriptLines": [
@@ -64,7 +73,11 @@
 				"     multiple: false,",
 				"     pickup: 'any',",
 				"     broadcast: 'auto')~> lookup1",
-				"lookup1 derive() ~> derivedColumn1"
+				"lookup1 derive(temp = ERROR_FUNCTION('')) ~> derivedColumn1",
+				"derivedColumn1 filter(ERROR_FUNCTION('1=1')) ~> filter1",
+				"filter1 sort(asc(temp, true),",
+				"     partitionLevel: true) ~> sort1",
+				"sort1 assert(expectTrue(ERROR_FUNCTION(''), false, 'assert1')) ~> assert1"
 			]
 		}
 	}
